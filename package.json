@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-engine",
+  "version": "1.0.0",
+  "description": "Nodejs run time ...Fundamentals",
+  "main": "app.js",
+  "scripts": {
+    "test": "me",
+    "app": "nodemon app",
+    "log": "nodemon logger",
+    "vidly": "nodemon vidly"
+  },
+  "author": "Jonas",
+  "license": "ISC",
+  "dependencies": {
+    "joi": "^17.9.2"
+  }
+}

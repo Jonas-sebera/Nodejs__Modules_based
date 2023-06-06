@@ -1,0 +1,101 @@
+
+NODEJS MODULES
+
+          -path module👌👌👌👌
+it is used to read the information about the file like the :
+                                                              -root
+                                                              -directory name
+                                                              -base
+                                                              -extension and 
+                                                              -the file name
+  it uses keywords like __dirname and __filename
+  eg of the script:
+  const path = require('path');
+ let path_Obj = path.parse(__filename);   
+console.log(path_Obj);
+
+           -OS module👌👌👌👌
+         it is used to extract information about the operatong system like memory and so operatong
+
+     eg:
+     const os = require('os);
+     const totalMemory = os.totalmem();
+     const freeMemory = os,freemem();
+     console.log(totalMemory);
+     console.log(freeMemory);    
+
+           -FILE SYSTEM module👌👌👌👌
+          it is a module that is used in accessing files in a certain directory eg:
+                            -readdir()
+The main module is -fs    
+
+                        -readFile()
+                        -readdir()      and so on 
+
+
+          -EVENT module👌👌👌👌                 
+
+     .emit is used to raise an event
+        .emit means making noise, produce --signalling
+      .on adds the listener function to the end of the listeners array for the event named eventName
+       emitter  iterates over all the registered emitters and calls the synchronously
+
+       /*****Event Arguments */
+       when you raise the event,you also wanna set some data to that event
+       
+       eg.:
+
+     const EventEmitter = require('event');
+     const emitter = new EventEmitter();
+
+     /***Register a listener
+
+     emitter.on('Message Logged',function(){
+        console.log('Listener called');
+     });
+  
+  /***To raise an event
+  emitter.emit('Message Logged',{id:1,url: 'http://'});
+
+NOTE: When we LOG a message, we need to raise an event
+hence this code is should be in logger.js extractly in log function after logging message; not in app.js     
+
+NOTE: - A class is like a blue print
+      - An object is the actual instance
+
+
+      NOTE: -With EventEmitter , iss good to use event extension with creating instances since it makes it easy
+        eg:
+        ||logger.js||
+
+        const EventEmitter = require('events');
+        var url = 'http://';
+
+        class Logger extends EventEmitter {
+            log(message);
+
+          /*****Send a HTTP request
+            console.log(message);
+
+            /*****Raise an event
+        this.emit('Message Logged',{id:1, url:http://'});
+        }
+
+        ||app.js||
+
+        const EventEmitter = require('events);
+        const Logger = require('./logger');
+        const logger = new Logger();
+
+        /*****Register a listener
+        logger.on('Message Logged',(arg) =>{
+            console.log('Listener called',arg);
+        })
+        logger.log('message');
+
+
+NOTE:
+If you wanna raise the events in your application to signal that something has happened,
+you need to create a class that extends events and emitter
+
+Also note that it is most preferable to use your own defined instance of the custom class 

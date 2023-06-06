@@ -1,0 +1,60 @@
+NOTE that the standard way is to declare needed modules in their own position together
+
+
+Nodejs is a runtime environment for running javascript code
+it is used to run javascript code outside a web browser
+it is used to make APIs
+APIs are servises that power client applications
+ 
+ NODEJS is used to build ;
+     -highly scalable,data intensive and real time applications
+
+    other tools fot building backend services:
+     -ASP.NET  
+     -JANGO etc
+//But note that node is neither a programming language nor a framework, instead, it is a runtime environment
+
+     what is special with nodejs??
+      -easy to get started
+      -great for prototyping and agile environment
+      -Superfast and highly scalable
+      -used in production by large companies like NETFLIX etc
+
+      NODE APP => ;
+       -Built twice as fast with fewer pple
+       -33% fewer lines of code
+       -40% fewer files
+       -2x request/services
+       -35% faster response time
+       -Uses javascript language
+       -Cleaner and more consistent codebase
+       -large ecosystem of an open source libraries
+
+
+//HOW NODE WORKS
+
+It is non-blocking
+
+It uses asynchronous achitecture(Non-blocking)
+means it continues its usual work even if there are other events to full fill
+
+//Single thread is used to handle multiple requests
+
+//Blocking or synchronous
+Thread just waits until a an active request is over
+
+
+with node js,
+When then the database is executing the data, 
+   a single thread doesnot still wait for the database to execute the data. instead, 
+    it moves on to another request as the first request is being processed
+
+hence due to this ability, nodejs can be used to build I/O intensive applications
+
+ NOTE: Nodejs should not be used in CPU intensive applications
+like: video encoding or on image manipulation servers
+
+XOXO, jonas....enough theory
+
+
+       
