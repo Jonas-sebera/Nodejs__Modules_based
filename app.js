@@ -1,4 +1,4 @@
-const tut = require('./tut');
+const tut = require("./tut");
 const EventEmitter = require("events");
 const readline = require("readline");
 const fs = require("fs");
@@ -246,7 +246,6 @@ console.log("With only pathmodule:", path);
 /**OS MODULE */
 /***Used to read the information of th operating system[os] */
 
-
 let totalMemory = os.totalmem();
 let freeMemory = os.freemem();
 
@@ -275,16 +274,15 @@ fs.readdir("./", function (err, files) {
 //**To read the files */
 
 const file = fs.readFile("./intro.txt");
-fs.readFile("./intro.txt",{ encoding:'utf-8'}, (err, file) => {
+fs.readFile("./intro.txt", { encoding: "utf-8" }, (err, file) => {
   if (file) {
     console.log(file);
   } else {
-    console.log("ERROR",err);
+    console.log("ERROR", err);
   }
 });
 
 /*****EVENTS MODULE **/
-
 
 const emitter = new EventEmitter();
 
